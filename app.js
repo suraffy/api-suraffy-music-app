@@ -5,6 +5,6 @@ const app = express();
 
 app.use(express.json());
 
-app.use("/music", music);
+app.use("/api/music", music);
 
 module.exports = app;
