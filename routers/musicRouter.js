@@ -1,6 +1,5 @@
 const express = require("express");
 const {
-  createMusic,
   getAllMusic,
   getMusic,
   updateMusic,
@@ -9,7 +8,7 @@ const {
 
 const router = express.Router();
 
-router.route("/").get(getAllMusic).post(createMusic);
+router.get("/", getAllMusic);
 
 router.route("/:id").get(getMusic).patch(updateMusic).delete(deleteMusic);
 
